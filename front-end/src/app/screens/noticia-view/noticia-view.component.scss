@@ -1,0 +1,21 @@
+#contenedorImagenNoticia img{
+    width: 500px;
+    height: 650px;
+}
+
+#textoNoticia {
+    border: 1px solid red;
+}
+
+#textoNoticia p{
+    word-wrap: break-word;
+}
+
+#listOtrasNoticias {
+    border: 1px solid blue;
+}
+
+.col-md-5 .miniImg img{
+    width: 100px;
+    height: 120px;
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../front-end/src/app/screens/noticia-view/noticia-view.component.scss"
+    ],
+    "names": [],
+    "file": "noticia-view.component.css"
+}

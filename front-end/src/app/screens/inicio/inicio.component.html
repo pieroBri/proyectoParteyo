@@ -1,0 +1,103 @@
+<div *ngIf="flag">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <img src="assets/depositphotos_54499559-stock-photo-portrait-of-a-stylish-hipster.png" alt="" class="img-fluid" id="img">
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-6">
+                    <p>"Los artistas conceptuales son místicos más</p>
+                    <p>que racionalistas. Llegan a conclusiones a las</p>
+                    <p>que no llega la lógica" - Sol LeWitt</p>
+                </div>
+                <div id="busquedaContenedor">
+                    <input id="busqueda" class="input-rounded" type="text"  name="filterArtista" [(ngModel)]="filterArtista">
+                    <span class="material-icons">search</span>
+                </div>
+                <div *ngFor="let artista of artistas | filter:filterArtista" class="content-cards"> 
+                    <div class="card col-md-2" (click)="irARuta(artista.id)">
+                        <div>{{artista.nombreArtista}}</div>
+                        <div> {{artista.nombreReal}} </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="barraNegra">
+            <img src="assets/barraNegra.png" style="width: 100%;" alt="barra negra">
+        </div>
+    </div>
+    
+    <!-- El carousel se a cambiao tio -->
+    <div class="container-fluid" id="artistas"> 
+        <div class="row">
+            <ngb-carousel class="carruselEpico" *ngIf="5 > artistas.length">
+                <ng-template ngbSlide *ngFor="let artista of artistas">
+                    <div class="row">
+                        <div class="col-md-1 bodyCarousel"></div>
+                        <div class="bodyCarousel col-md-3">
+                            <img [src]=artista.fotoDePerfilULR alt="fotos epicas" class="imagenesArtistas">
+                          </div>
+                          <div class="bodyCarousel col-md-6">
+                            <h3>{{artista.nombreArtista}}</h3>
+                            <p>{{artista.descripcion}}</p>
+                            <button class="btn btn-secondary" (click)="irARuta(artista.id)">Ver más</button>
+                          </div> 
+                          <div class="bodyCarousel col-md-2"></div>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+            <ngb-carousel class="carruselEpico" *ngIf="artistas.length > 4">
+                <ng-template ngbSlide *ngFor="let artista of artistasRandom">
+                    <div class="row">
+                        <div class="bodyCarousel col-md-4">
+                            <img [src]=artista.fotoDePerfilULR alt="Random first slide" class="imagenesArtistas">
+                        </div>
+                        <div class=" col-md-7">
+                            <h3>{{artista.nombreArtista}}</h3>
+                            <p>{{artista.descripcion}}</p>
+                        </div>
+                        <div class="bodyCarousel col-md-1"></div>
+                    </div> 
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <div class="barraNegra">
+            <img src="assets/barraNegra.png" style="width: 100%;" alt="barra negra">
+        </div>
+    </div>
+    
+    <div id= "contendorNoticia"class="container-fluid">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let item of listaDeNoticias">
+                <div class="contendoreNoticias">
+                    <img src="{{item.imagenURL}}" alt="Galeria noticias" class="imagenesNoticias">
+                    <div class="overlay" (click)="llevarAVista(item.id)">
+                        <h1>Hover</h1>
+                        <span class="material-icons white md-40">search</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    
+        <div class="barraNegra">
+            <img src="assets/barraNegra.png" style="width: 100%;" alt="barra negra">
+        </div>
+    </div>
+    
+    
+    <div class="container-fluid" id="team">
+        <div class="row team">
+            <div class="col-md-4" *ngFor="let item of arregloDeTeam">
+                <app-team-pag [integranteDeTeam]="item">
+                </app-team-pag>
+            </div>
+        </div>
+
+        <div class="barraNegra">
+            <img src="assets/barraNegra.png" style="width: 100%;" alt="barra negra">
+        </div>
+    </div>
+</div>

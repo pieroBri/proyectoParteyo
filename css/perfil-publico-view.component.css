@@ -1,0 +1,198 @@
+.col-md-5.col-sm-3 {
+  border-color: red;
+  border-style: solid;
+  border-width: 3px;
+}
+
+#contenedorDeTitulo {
+  position: relative;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.col-md-7.col-sm-4 {
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
+
+#contenedorImagen {
+  position: relative;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#imagen {
+  position: relative;
+  border-radius: 50%;
+  width: 40%;
+  height: -5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#contenedorDeObras {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
+
+#contenedorBotones {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#contenedorBotones button {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  margin-top: 2%;
+}
+
+#contenedorBotones input {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  margin-top: 2%;
+}
+
+#contenedorDatosPersonales {
+  position: relative;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 4%;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.contendoreObras {
+  position: relative;
+  border: 1px solid blue;
+}
+
+.contendoreObras {
+  position: relative;
+  border: 1px solid blue;
+}
+
+.contendoreObras {
+  position: relative;
+  border: 1px solid blue;
+}
+
+.obras2 {
+  display: block;
+  width: 100%;
+  height: 385px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.obras3 {
+  display: block;
+  width: 100%;
+  height: 385px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.obras4 {
+  display: block;
+  width: 100%;
+  height: 385px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.overlay > * {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay:hover > * {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.descripcionObra {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.contendorDeNombre {
+  position: relative;
+  text-align: 70%;
+}
+
+.contendorDeNombre p {
+  font-size: fluid;
+}
+/*# sourceMappingURL=perfil-publico-view.component.css.map */

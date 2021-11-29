@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../front-end/src/app/screens/edicion-perfil/edicion-perfil.component.scss"
+    ],
+    "names": [],
+    "file": "edicion-perfil.component.css"
+}
